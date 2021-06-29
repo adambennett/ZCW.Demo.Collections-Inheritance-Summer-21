@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Archive {
 
-    private Map<String, Automobile> archive;
+    private final Map<String, Automobile> archive;
 
     public Archive()
     {

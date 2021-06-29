@@ -22,6 +22,11 @@ public class Depot implements Iterable<Automobile> {
         return this.docked.remove(automobile);
     }
 
+    public List<Automobile> getDocked()
+    {
+        return this.docked;
+    }
+
     public void sort()
     {
         Collections.sort(this.docked);

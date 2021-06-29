@@ -3,6 +3,8 @@ package examples;
 import collections.*;
 import inheritance.*;
 
+import java.util.*;
+
 public class SortingExample {
 
     public static void run()
@@ -37,5 +39,9 @@ public class SortingExample {
         depot.sort(Automobile::getSeats);
 
         System.out.println("\nSorted by # of seats: " + depot);
+
+        depot.getDocked().sort(new MaxSpeedCompare());
+
+        System.out.println("\nSorted by Maximum Speed: " + depot);
     }
 }
