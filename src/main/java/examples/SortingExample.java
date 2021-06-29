@@ -32,16 +32,22 @@ public class SortingExample {
         depot.park(smallCar);
         depot.park(bigCar);
 
+
+        // Standard sort using Comparable, or Automobile.compareTo()
         depot.sort();
 
         System.out.println("\nSorted by speed: " + depot);
 
-        depot.sort(Automobile::getSeats);
 
-        System.out.println("\nSorted by # of seats: " + depot);
-
+        // More specific sort using custom Comparator
         depot.getDocked().sort(new MaxSpeedCompare());
 
         System.out.println("\nSorted by Maximum Speed: " + depot);
+
+
+        // Dynamic sort based on whatever method you want to use
+        depot.sort(Automobile::getSeats);
+
+        System.out.println("\nSorted by # of seats: " + depot);
     }
 }
