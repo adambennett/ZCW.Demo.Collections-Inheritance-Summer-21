@@ -3,8 +3,6 @@ package examples;
 import collections.*;
 import inheritance.*;
 
-import java.util.*;
-
 public class SortingExample {
 
     public static void run()
@@ -36,7 +34,12 @@ public class SortingExample {
         // Standard sort using Comparable, or Automobile.compareTo()
         depot.sort();
 
-        System.out.println("\nSorted by speed: " + depot);
+        System.out.println("\nSorted by speed: " + depot + "\n");
+
+        for (var automobile : depot)
+        {
+            System.out.println("Automobile in depot: " + automobile.name);
+        }
 
 
         // More specific sort using custom Comparator
@@ -48,6 +51,11 @@ public class SortingExample {
         // Dynamic sort based on whatever method you want to use
         depot.sort(Automobile::getSeats);
 
-        System.out.println("\nSorted by # of seats: " + depot);
+        System.out.println("\nSorted by # of seats: " + depot + "\n");
+
+        for (var automobile : depot)
+        {
+            System.out.println("Automobile in depot: " + automobile.name);
+        }
     }
 }
