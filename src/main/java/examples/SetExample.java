@@ -42,7 +42,12 @@ public class SetExample
         objects.add(obj2);
         objects.add(obj3);
 
-        System.out.println("Size of set: " + objects.size());
+        System.out.println("Size of set: " + objects.size() + "\n");
+
+        for (var entry : objects)
+        {
+            System.out.println("Set element: " + entry.name);
+        }
     }
 
 }

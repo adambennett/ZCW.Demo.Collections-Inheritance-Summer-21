@@ -37,7 +37,7 @@ public class MapExample2
 
     public static void run()
     {
-        Map<KeyObject, ValueObject> map = new HashMap<>();
+        var map = new HashMap<KeyObject, ValueObject>();
 
         var key1 = new KeyObject("TestKey", 0, true);
         var key2 = new KeyObject("TestKey", 1, true);

@@ -33,19 +33,19 @@ public class FailExamples
             }
         }
 
-        System.out.println("Thread safe list" + threadSafeList);
+        System.out.println("Thread safe list: " + threadSafeList);
 
         for (var str : unsafeList)
         {
             if (str.equals("Test"))
             {
-                System.out.println("Operating on unsafe list");
                 unsafeList.remove(str);
                 unsafeList.add("Adam");
+                System.out.println("Unsafe list (inside loop): " + unsafeList);
             }
         }
 
-        System.out.println("Unsafe list" + unsafeList);
+        System.out.println("Unsafe list: " + unsafeList);
     }
 
 }

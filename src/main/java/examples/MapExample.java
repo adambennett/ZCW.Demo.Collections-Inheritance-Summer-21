@@ -25,7 +25,7 @@ public class MapExample
         list.add("Red");
         list.add("Large");
 
-        // To get object color from list, we must memorize or hardcode list.get(0)
+        // To get object color from this list, we must memorize or hardcode list.get(0)
         String color = list.get(0);
 
         var test = list.contains("Red");
