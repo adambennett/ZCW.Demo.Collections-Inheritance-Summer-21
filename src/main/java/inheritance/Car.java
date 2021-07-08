@@ -1,6 +1,7 @@
 package inheritance;
 
-public class Car extends Automobile {
+public class Car extends Automobile
+{
 
     public Car(int wheels, int seats)
     {

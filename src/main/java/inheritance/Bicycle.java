@@ -36,4 +36,5 @@ public class Bicycle implements Vehicle
     {
         return speed;
     }
+
 }

@@ -6,15 +6,16 @@ import inheritance.*;
 import java.util.*;
 
 @SuppressWarnings("ALL")
-public class InstanceOfExample {
+public class InstanceOfExample
+{
 
     public static void run()
     {
-        Truck truck = new Truck(0, 0);
+        var truck = new Truck(0, 0);
 
-        Car car = new Car(0, 0);
+        var car = new Car(0, 0);
 
-        Depot depot = new Depot();
+        var depot = new Depot();
 
         System.out.println("Truck is a vehicle: " + (truck instanceof Vehicle));
         System.out.println("Truck is an automobile: " + (truck instanceof Automobile));
@@ -28,4 +29,5 @@ public class InstanceOfExample {
         System.out.println("Depot is a list: " + (depot instanceof List));
         System.out.println("Depot is an itearable: " + (depot instanceof Iterable));
     }
+
 }

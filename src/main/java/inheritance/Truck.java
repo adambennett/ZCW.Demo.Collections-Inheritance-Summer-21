@@ -1,11 +1,13 @@
 package inheritance;
 
-public class Truck extends Automobile {
+public class Truck extends Automobile
+{
 
     private int weight;
     private final int reloadWeight;
 
-    public Truck(int wheels, int seats) {
+    public Truck(int wheels, int seats)
+    {
         super(wheels, seats, 100);
         this.reloadWeight = (wheels - 4) * 500;
     }
@@ -42,4 +44,5 @@ public class Truck extends Automobile {
     {
         this.weight = weight;
     }
+
 }

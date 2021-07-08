@@ -3,8 +3,8 @@ package examples;
 import java.util.*;
 
 @SuppressWarnings("UnusedAssignment")
-public class MapExample {
-
+public class MapExample
+{
 
     // ARRAY
 
@@ -30,6 +30,8 @@ public class MapExample {
 
         var test = list.contains("Red");
 
+        System.out.println("List contains \"Red\": " + test);
+
         var map = new HashMap<String, String>();
         map.put("Color", "Red");
         map.put("Size", "Large");
@@ -40,4 +42,5 @@ public class MapExample {
         System.out.println("Color: " + color);
 
     }
+
 }

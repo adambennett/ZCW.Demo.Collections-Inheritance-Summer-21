@@ -69,4 +69,5 @@ public abstract class Automobile implements Vehicle, Comparable<Automobile>
     {
         return maxSpeed;
     }
+
 }

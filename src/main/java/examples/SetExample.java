@@ -15,7 +15,8 @@ public class SetExample
         }
 
         @Override
-        public boolean equals(Object o) {
+        public boolean equals(Object o)
+        {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
             SetObject setObject = (SetObject) o;
@@ -23,14 +24,15 @@ public class SetExample
         }
 
         @Override
-        public int hashCode() {
+        public int hashCode()
+        {
             return Objects.hash(name);
         }
     }
 
     public static void run()
     {
-        Set<SetObject> objects = new HashSet<>();
+        var objects = new HashSet<SetObject>();
 
         SetObject obj1 = new SetObject("Test");
         SetObject obj2 = new SetObject("Test");

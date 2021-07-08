@@ -1,6 +1,7 @@
 import examples.*;
 
-public class Runner {
+public class Runner
+{
 
     // Basic Benefits of using Collections & Inheritance
 
@@ -9,12 +10,14 @@ public class Runner {
     // 3. Make code more - organized
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         //InstanceOfExample.run();
         //SortingExample.run();
         //SetExample.run();
         //MapExample.run();
         //MapExample2.run();
-        FailExamples.run();
+        //FailExamples.run();
     }
+
 }

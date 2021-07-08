@@ -2,7 +2,8 @@ package examples;
 
 import java.util.*;
 
-public class MapExample2 {
+public class MapExample2
+{
 
     private static class KeyObject
     {
@@ -38,11 +39,11 @@ public class MapExample2 {
     {
         Map<KeyObject, ValueObject> map = new HashMap<>();
 
-        KeyObject key1 = new KeyObject("TestKey", 0, true);
-        KeyObject key2 = new KeyObject("TestKey", 1, true);
+        var key1 = new KeyObject("TestKey", 0, true);
+        var key2 = new KeyObject("TestKey", 1, true);
 
-        ValueObject value1 = new ValueObject("val1", 1, "Value For Key #1", false);
-        ValueObject value2 = new ValueObject("val2", 2, "Value For Key #2", true);
+        var value1 = new ValueObject("val1", 1, "Value For Key #1", false);
+        var value2 = new ValueObject("val2", 2, "Value For Key #2", true);
 
         map.put(key1, value1);
         map.put(key2, value2);
@@ -56,10 +57,8 @@ public class MapExample2 {
         }
 
         var testKeyValue = map.getOrDefault(key1, null);
+
         System.out.println("Value for " + key1.name + ": " + testKeyValue.value);
     }
-
-
-
 
 }

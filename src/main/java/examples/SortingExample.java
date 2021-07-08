@@ -3,25 +3,26 @@ package examples;
 import collections.*;
 import inheritance.*;
 
-public class SortingExample {
+public class SortingExample
+{
 
     public static void run()
     {
-        Depot depot = new Depot();
+        var depot = new Depot();
 
-        Truck smallTruck = new Truck(6, 2);
+        var smallTruck = new Truck(6, 2);
         smallTruck.name = "Small Truck";
         smallTruck.speedUp(10);
 
-        Truck bigTruck = new Truck(1600, 20);
+        var bigTruck = new Truck(1600, 20);
         bigTruck.name = "Big Truck";
         bigTruck.speedUp(5);
 
-        Car smallCar = new Car(4, 4);
+        var smallCar = new Car(4, 4);
         smallCar.name = "Small Car";
         smallCar.speedUp(50);
 
-        Car bigCar = new Car(4, 6);
+        var bigCar = new Car(4, 6);
         bigCar.name = "Big Car";
         bigCar.speedUp(11);
 
@@ -31,7 +32,7 @@ public class SortingExample {
         depot.park(bigCar);
 
 
-        // Standard sort using Comparable, or Automobile.compareTo()
+        // Standard sort using Comparable, which will use Automobile.compareTo()
         depot.sort();
 
         System.out.println("\nSorted by speed: " + depot + "\n");
@@ -58,4 +59,5 @@ public class SortingExample {
             System.out.println("Automobile in depot: " + automobile.name);
         }
     }
+
 }

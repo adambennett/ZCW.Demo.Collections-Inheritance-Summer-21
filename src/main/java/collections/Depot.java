@@ -3,7 +3,8 @@ package collections;
 import inheritance.*;
 import java.util.*;
 
-public class Depot implements Iterable<Automobile> {
+public class Depot implements Iterable<Automobile>
+{
 
     private final List<Automobile> docked;
 
@@ -49,4 +50,5 @@ public class Depot implements Iterable<Automobile> {
     public String toString() {
         return this.docked.toString();
     }
+
 }
