@@ -34,7 +34,7 @@ public class Depot implements Iterable<Automobile>
     }
 
     @SuppressWarnings("Java8ListSort")
-    public void sort(SortingFunction func)
+    public void sort(SortingFunction<Automobile> func)
     {
         GenericAutomobileCompare compare = new GenericAutomobileCompare(func);
         Collections.sort(this.docked, compare);

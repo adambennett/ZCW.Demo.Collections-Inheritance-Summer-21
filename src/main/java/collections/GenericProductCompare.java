@@ -4,11 +4,11 @@ import inheritance.*;
 
 import java.util.*;
 
-public record GenericAutomobileCompare(SortingFunction<Automobile> function) implements Comparator<Automobile>
+public record GenericProductCompare(SortingFunction<Product> function) implements Comparator<Product>
 {
 
     @Override
-    public int compare(Automobile o1, Automobile o2)
+    public int compare(Product o1, Product o2)
     {
         return Integer.compare(function.comparison(o1), function.comparison(o2));
     }

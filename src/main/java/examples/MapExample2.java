@@ -1,64 +1,33 @@
 package examples;
 
+import inheritance.*;
+
 import java.util.*;
 
 public class MapExample2
 {
 
-    private static class KeyObject
-    {
-        public String name;
-        public Integer number;
-        public Boolean flag;
-
-        public KeyObject(String name, int number, boolean flag)
-        {
-            this.name = name;
-            this.number = number;
-            this.flag = flag;
-        }
-    }
-
-    private static class ValueObject
-    {
-        public String id;
-        public Integer value;
-        public String displayName;
-        public Boolean isValid;
-
-        public ValueObject(String id, int value, String displayName, boolean isValid)
-        {
-            this.id = id;
-            this.value = value;
-            this.displayName = displayName;
-            this.isValid = isValid;
-        }
-    }
-
     public static void run()
     {
-        var map = new HashMap<KeyObject, ValueObject>();
+        var map = new HashMap<String, Product>();
 
-        var key1 = new KeyObject("TestKey", 0, true);
-        var key2 = new KeyObject("TestKey", 1, true);
+        var apples = new Product("6881-9292", 15, "Apples", false);
+        var beef = new Product("6881-9293", 2, "Ground Beef (1 lb)", true);
 
-        var value1 = new ValueObject("val1", 1, "Value For Key #1", false);
-        var value2 = new ValueObject("val2", 2, "Value For Key #2", true);
-
-        map.put(key1, value1);
-        map.put(key2, value2);
+        map.put(apples.product, apples);
+        map.put(beef.product, beef);
 
         for (var entry : map.entrySet())
         {
-            if (entry.getKey().name.equals("TestKey"))
+            if (entry.getKey().equals("Apples"))
             {
-                System.out.println("Value for " + entry.getKey().name + ": " + entry.getValue().value);
+                System.out.println("Number of " + entry.getKey() + " purchased: " + entry.getValue().quantity);
             }
         }
 
-        var testKeyValue = map.getOrDefault(key1, null);
+        var testKeyValue = map.getOrDefault("Apples", null);
 
-        System.out.println("Value for " + key1.name + ": " + testKeyValue.value);
+        System.out.println("Number of " + testKeyValue.product + " purchased: " + testKeyValue.quantity);
     }
 
 }

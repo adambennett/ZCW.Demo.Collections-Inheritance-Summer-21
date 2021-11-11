@@ -15,17 +15,14 @@ public class SetExample
         }
 
         @Override
-        public boolean equals(Object o)
-        {
+        public boolean equals(Object o) {
             if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            SetObject setObject = (SetObject) o;
+            if (!(o instanceof SetObject setObject)) return false;
             return Objects.equals(name, setObject.name);
         }
 
         @Override
-        public int hashCode()
-        {
+        public int hashCode() {
             return Objects.hash(name);
         }
     }

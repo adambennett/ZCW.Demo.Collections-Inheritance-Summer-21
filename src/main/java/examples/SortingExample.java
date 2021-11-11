@@ -3,6 +3,8 @@ package examples;
 import collections.*;
 import inheritance.*;
 
+import java.util.*;
+
 public class SortingExample
 {
 
@@ -43,21 +45,23 @@ public class SortingExample
         }
 
 
-        // More specific sort using custom Comparator
+        // More specific sort using pre-defined custom Comparator
         depot.getDocked().sort(new MaxSpeedCompare());
 
-        System.out.println("\nSorted by Maximum Speed: " + depot);
+        // Or just make your own Comparator on the fly with an anonymous class
+        depot.getDocked().sort(new Comparator<>() {
+            @Override
+            public int compare(Automobile o1, Automobile o2) {
+                return Integer.compare(o1.getWheels(), o2.getWheels());
+            }
+        });
 
+        // Or just make your own Comparator on the fly with a lambda function
+        depot.getDocked().sort((o1, o2) -> Integer.compare(o1.getMaxSpeed(), o2.getMaxSpeed()));
 
         // Dynamic sort based on whatever method you want to use
         depot.sort(Automobile::getSeats);
 
-        System.out.println("\nSorted by # of seats: " + depot + "\n");
-
-        for (var automobile : depot)
-        {
-            System.out.println("Automobile in depot: " + automobile.name);
-        }
     }
 
 }

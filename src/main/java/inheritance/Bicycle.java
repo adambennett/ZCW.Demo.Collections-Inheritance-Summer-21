@@ -24,7 +24,7 @@ public class Bicycle implements Vehicle
 
     public String toString()
     {
-        return ("No of gears are " + gear + "\nspeed of bicycle is " + speed);
+        return ("No of gears are " + gear + "\nSpeed of bicycle is " + speed);
     }
 
     public int getGear()

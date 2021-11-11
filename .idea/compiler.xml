@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ZCW.Demo.Collections-Inheritance-Summer-21" />
         <module name="Collections-Inheritance-Summer-21" />
       </profile>
     </annotationProcessing>
