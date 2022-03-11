@@ -51,8 +51,8 @@ public class Warehouse implements Iterable<Product>
     @SuppressWarnings("Java8ListSort")
     public void sort(SortingFunction<Product> func)
     {
-        GenericProductCompare compare = new GenericProductCompare(func);
-        Collections.sort(this.products, compare);
+        GenericCompare<Product> comparator = new GenericCompare<>(func);
+        Collections.sort(this.products, comparator);
     }
 
     @Override
