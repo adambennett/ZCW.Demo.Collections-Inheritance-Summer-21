@@ -36,6 +36,7 @@ public class SortingExample
 
         // Standard sort using Comparable, which will use Automobile.compareTo()
         depot.sort();
+        Collections.sort(depot.getDocked());
 
         System.out.println("\nSorted by speed: " + depot + "\n");
 

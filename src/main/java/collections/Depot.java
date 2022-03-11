@@ -8,6 +8,8 @@ public class Depot implements Iterable<Automobile>
 
     private final List<Automobile> docked;
 
+    private String address;
+
     public Depot()
     {
         this.docked = new ArrayList<>();
@@ -36,8 +38,8 @@ public class Depot implements Iterable<Automobile>
     @SuppressWarnings("Java8ListSort")
     public void sort(SortingFunction<Automobile> func)
     {
-        GenericAutomobileCompare compare = new GenericAutomobileCompare(func);
-        Collections.sort(this.docked, compare);
+        GenericAutomobileCompare comparator = new GenericAutomobileCompare(func);
+        Collections.sort(this.docked, comparator);
     }
 
     @Override
