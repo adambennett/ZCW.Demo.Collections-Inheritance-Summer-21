@@ -1,6 +1,6 @@
 package inheritance;
 
-public class Truck extends Automobile
+public class Truck extends Vehicle
 {
 
     private int weight;
@@ -17,6 +17,11 @@ public class Truck extends Automobile
     {
         increment *= this.weightModifier();
         super.speedUp(increment);
+    }
+
+    @Override
+    public int getSalesPrice() {
+        return 50000;
     }
 
     private float weightModifier()

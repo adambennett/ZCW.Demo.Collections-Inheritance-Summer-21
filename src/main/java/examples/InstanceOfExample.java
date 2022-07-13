@@ -17,12 +17,12 @@ public class InstanceOfExample
 
         var depot = new Depot();
 
+        System.out.println("Truck is sellable: " + (truck instanceof Sellable));
         System.out.println("Truck is a vehicle: " + (truck instanceof Vehicle));
-        System.out.println("Truck is an automobile: " + (truck instanceof Automobile));
         System.out.println("Truck is a comparator: " + (truck instanceof Comparator));
 
+        System.out.println("Car is sellable: " + (car instanceof Sellable));
         System.out.println("Car is a vehicle: " + (car instanceof Vehicle));
-        System.out.println("Car is an automobile: " + (car instanceof Automobile));
         System.out.println("Car is an iterator: " + (car instanceof Iterator));
 
         System.out.println("Depot is an iterator: " + (depot instanceof Iterator));

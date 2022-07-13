@@ -52,7 +52,7 @@ public class SortingExample
         // Or just make your own Comparator on the fly with an anonymous class
         depot.getDocked().sort(new Comparator<>() {
             @Override
-            public int compare(Automobile o1, Automobile o2) {
+            public int compare(Vehicle o1, Vehicle o2) {
                 return Integer.compare(o1.getWheels(), o2.getWheels());
             }
         });
@@ -61,7 +61,7 @@ public class SortingExample
         depot.getDocked().sort((o1, o2) -> Integer.compare(o1.getMaxSpeed(), o2.getMaxSpeed()));
 
         // Dynamic sort based on whatever method you want to use
-        depot.sort(Automobile::getSeats);
+        depot.sort(Vehicle::getSeats);
 
     }
 

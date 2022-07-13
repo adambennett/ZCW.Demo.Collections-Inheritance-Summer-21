@@ -1,8 +1,5 @@
-import collections.*;
 import examples.*;
-import inheritance.*;
 
-import java.util.*;
 
 public class Runner
 {
@@ -16,12 +13,12 @@ public class Runner
 
     public static void main(String[] args)
     {
-        InstanceOfExample.run();
+        //InstanceOfExample.run();
         //SortingExample.run();
         //SetExample.run();
         //MapExample.run();
         //MapExample2.run();
-        //MapExample3.run();
+        MapExample3.run();
         //FailExamples.run();
         //InstanceOfExample2.run();
     }

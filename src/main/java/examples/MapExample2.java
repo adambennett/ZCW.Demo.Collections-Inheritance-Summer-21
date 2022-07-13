@@ -11,11 +11,11 @@ public class MapExample2
     {
         var map = new HashMap<String, Product>();
 
-        var apples = new Product("6881-9292", 15, "Apples", false);
-        var beef = new Product("6881-9293", 2, "Ground Beef (1 lb)", true);
+        var apples = new Product("6881-9292", 15, "Apples", 1.25);
+        var beef = new Product("6881-9293", 2, "Ground Beef (1 lb)", 7.50);
 
-        map.put(apples.product, apples);
-        map.put(beef.product, beef);
+        map.put(apples.item, apples);
+        map.put(beef.item, beef);
 
         for (var entry : map.entrySet())
         {
@@ -27,7 +27,7 @@ public class MapExample2
 
         var testKeyValue = map.getOrDefault("Apples", null);
 
-        System.out.println("Number of " + testKeyValue.product + " purchased: " + testKeyValue.quantity);
+        System.out.println("Number of " + testKeyValue.item + " purchased: " + testKeyValue.quantity);
     }
 
 }

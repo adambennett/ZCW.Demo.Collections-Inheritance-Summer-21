@@ -3,29 +3,27 @@ package collections;
 import inheritance.*;
 import java.util.*;
 
-public class Depot implements Iterable<Automobile>
+public class Depot implements Iterable<Vehicle>
 {
 
-    private final List<Automobile> docked;
-
-    private String address;
+    private final List<Vehicle> docked;
 
     public Depot()
     {
         this.docked = new ArrayList<>();
     }
 
-    public void park(Automobile automobile)
+    public void park(Vehicle vehicle)
     {
-        this.docked.add(automobile);
+        this.docked.add(vehicle);
     }
 
-    public boolean remove(Automobile automobile)
+    public boolean remove(Vehicle vehicle)
     {
-        return this.docked.remove(automobile);
+        return this.docked.remove(vehicle);
     }
 
-    public List<Automobile> getDocked()
+    public List<Vehicle> getDocked()
     {
         return this.docked;
     }
@@ -36,14 +34,14 @@ public class Depot implements Iterable<Automobile>
     }
 
     @SuppressWarnings("Java8ListSort")
-    public void sort(SortingFunction<Automobile> func)
+    public void sort(SortingFunction<Vehicle> func)
     {
-        GenericAutomobileCompare comparator = new GenericAutomobileCompare(func);
+        GenericVehicleCompare comparator = new GenericVehicleCompare(func);
         Collections.sort(this.docked, comparator);
     }
 
     @Override
-    public Iterator<Automobile> iterator()
+    public Iterator<Vehicle> iterator()
     {
         return this.docked.iterator();
     }
