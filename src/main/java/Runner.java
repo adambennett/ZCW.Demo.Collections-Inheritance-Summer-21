@@ -13,14 +13,15 @@ public class Runner
 
     public static void main(String[] args)
     {
-        //InstanceOfExample.run();
-        //SortingExample.run();
+        SortingExample.run();
+        //SortingExample2.run();
         //SetExample.run();
         //MapExample.run();
         //MapExample2.run();
-        MapExample3.run();
-        //FailExamples.run();
+        //InstanceOfExample.run();
         //InstanceOfExample2.run();
+        //MapExample3.run();
+        //FailExamples.run();
     }
 
 }

@@ -9,15 +9,15 @@ public class MapExample2
 
     public static void run()
     {
-        var map = new HashMap<String, Product>();
+        Map<String, Product> map = new HashMap<String, Product>();
 
-        var apples = new Product("6881-9292", 15, "Apples", 1.25);
-        var beef = new Product("6881-9293", 2, "Ground Beef (1 lb)", 7.50);
+        Product apples = new Product("6881-9292", 15, "Apples", 1.25);
+        Product beef = new Product("6881-9293", 2, "Ground Beef (1 lb)", 7.50);
 
         map.put(apples.item, apples);
         map.put(beef.item, beef);
 
-        for (var entry : map.entrySet())
+        for (Map.Entry<String, Product> entry : map.entrySet())
         {
             if (entry.getKey().equals("Apples"))
             {
@@ -25,9 +25,20 @@ public class MapExample2
             }
         }
 
-        var testKeyValue = map.getOrDefault("Apples", null);
+        Product testKeyValue = map.getOrDefault("Apples", null);
 
         System.out.println("Number of " + testKeyValue.item + " purchased: " + testKeyValue.quantity);
+
+        boolean isApplesInMap = map.containsKey("Apples");
+        System.out.println("Apples appeared in the map: " + isApplesInMap);
+
+        for (Product entry : map.values()) {
+            System.out.println("Values: " + entry.item);
+        }
+
+        for (String entry : map.keySet()) {
+            System.out.println("Keys: " + entry);
+        }
     }
 
 }

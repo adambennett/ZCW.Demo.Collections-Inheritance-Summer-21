@@ -82,6 +82,6 @@ public abstract class Vehicle implements Sellable, Comparable<Vehicle>
 
     @Override
     public String toString() {
-        return this.display(0, "");
+        return this.name;
     }
 }
