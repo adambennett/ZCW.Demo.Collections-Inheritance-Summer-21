@@ -34,15 +34,15 @@ public class SortingExample
         depot.park(bigCar);
 
 
-        // Standard sort using Comparable, which will use Automobile.compareTo()
+        // Standard sort using Comparable, which will use Vehicle.compareTo()
         depot.sort();
         Collections.sort(depot.getDocked());
 
         System.out.println("\nSorted by speed: " + depot + "\n");
 
-        for (var automobile : depot)
+        for (var vehicle : depot)
         {
-            System.out.println("Automobile in depot: " + automobile.name);
+            System.out.println("Vehicle in depot: " + vehicle.name);
         }
 
 
