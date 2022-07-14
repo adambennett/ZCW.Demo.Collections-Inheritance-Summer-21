@@ -7,4 +7,6 @@ public interface Sellable
 
     String getStoreDisplayName();
 
+    boolean canSell();
+
 }

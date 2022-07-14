@@ -60,4 +60,9 @@ public class Product implements Sellable, Comparable<Product> {
     public String getStoreDisplayName() {
         return this.item;
     }
+
+    @Override
+    public boolean canSell() {
+        return this.quantity > 0;
+    }
 }

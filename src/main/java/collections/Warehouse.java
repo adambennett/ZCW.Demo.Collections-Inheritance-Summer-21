@@ -38,7 +38,7 @@ public class Warehouse implements Iterable<Sellable>
         for (var i = 0; i < 100; i++) {
             var roll = ThreadLocalRandom.current().nextInt(0, 9);
             switch (roll) {
-                case 0 -> this.store(apple);
+                //case 0 -> this.store(apple);
                 case 1 -> this.store(soda);
                 case 2 -> this.store(beef);
                 case 3 -> this.store(napkins);

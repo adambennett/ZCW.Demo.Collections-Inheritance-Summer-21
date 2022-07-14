@@ -40,7 +40,8 @@ public class MapExample3
             }
         }
 
-        // Print contents of warehouse
+        // Print contents of warehouse and see what is available
+        var available = new TreeSet<String>();
         for (var entry : map.entrySet())
         {
             var value = entry.getValue();
@@ -55,7 +56,13 @@ public class MapExample3
                 middle = entry.getKey() + ": " + entry.getValue();
             }
             System.out.println("{\n    " + middle + "\n},");
+
+            if (entry.getValue().canSell()) {
+                available.add(entry.getKey());
+            }
         }
+
+        System.out.println("Available products: " + available);
     }
 
 }
