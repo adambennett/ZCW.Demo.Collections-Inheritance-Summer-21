@@ -14,3 +14,28 @@ public record GenericVehicleCompare(SortingFunction<Vehicle> function) implement
     }
 
 }
+
+// The 'record' keyword creates a class that looks something like the definition below
+
+/*
+
+
+public final class GenericVehicleCompare implements Comparator<Vehicle> {
+
+    private final SortingFunction<Vehicle> function;
+
+    public GenericVehicleCompare(SortingFunction<Vehicle> function) {
+        this.function = function;
+    }
+
+    SortingFunction<Vehicle> function() { return this.function; }
+
+    // Implementation of equals() and hashCode(), which specify that two record objects are equal if they are of the same type and contain equal field values.
+    public boolean equals...
+    public int hashCode...
+
+    // An implementation of toString() that returns a string representation of all the record class's fields, including their names.
+    public String toString() {...}
+}
+
+*/
