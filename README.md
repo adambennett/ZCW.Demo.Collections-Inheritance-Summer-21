@@ -100,6 +100,7 @@ MapExample3
 - Combining on-the-fly collections with collection-based objects like Warehouse
 - Using maps to organize data
 - Dealing with unknown object types
+- TreeSet example
 
 FailExamples
 -------------
