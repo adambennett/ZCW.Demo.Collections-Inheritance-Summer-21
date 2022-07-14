@@ -1,6 +1,6 @@
 package inheritance;
 
-public class MountainBike extends Bicycle
+public final class MountainBike extends Bicycle
 {
 
     public int seatHeight;
